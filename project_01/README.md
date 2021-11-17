@@ -3,7 +3,7 @@
 ## Build Instructions
 
 ### Hardware
-1. USB Mini Microphone
+#### USB Mini Microphone
 Before inserting the Pocketbeagle on the breadboard, breadboard wires should be inserted ahead of time for the 5pin micro USB port. Wires should be placed so that when P1_1 of the Pocketbeagle is inserted into hole 1a of the breadboard:
 - P1_7 is connected to VCC of the USB port
 - P1_9 is connected to D- of the USB port
@@ -13,17 +13,17 @@ Before inserting the Pocketbeagle on the breadboard, breadboard wires should be 
 
 The micro USB to USB A adapter should then be inserted into the port followed by the USB A mini microphone. The Pocketbeagle can now also to inserted into the breadboard, where P1_1 would be inserted into hole 1a of the breadboard.
 
-2. Power Bussing
+#### Power Bussing
 To provide power through the breadboard, the Pocketbeagle must be wired so that power can go through the power bus rails on either side of the breadboard. Using jumper wires:
 - Connect P1_14 to the "+" power bus rail of the breadboard, this will provide 3.3 V through the rail
 - Connect P1_16 to the "-" power bus rail of the breadboard, this will be the ground rail
 
 The rails on either side of the breadboard should also be connected together so that both sets of rails share the same power and ground.
 
-3. Push Buttons
+#### Push Buttons
 The three push buttons will be used to switch between the three color pattern settings. They must be inserted in the middle of the breadboard so that the plastic nubs on the bottom fit into the groove at the center of the breadboard. A 1k Ohm resistor should be connected to the "+" power bus and one of the button terminals. A jumper wire should also be connected between the resistor and same button terminal to a GPIO pin on the Pocketbeagle. The other button terminal should be grounded by connecting it to the "-" rail of the breadboard using a jumper wire. Repeat the same steps for the other two buttons. I used P2_2, P2_4, and P2_6 for my GPIO pins.
 
-4. LED Strip and Level Shifter
+#### LED Strip and Level Shifter
 To use connect the LED strip you must first connect the USB power hub to an outlet. The USB to 5pin terminal block can then be inserted into the USB hub. The level shifter will be inserted into the middle of the breadboard next to the push buttons. Connections are as follows:
 - "+" port of the 5pin terminal block to VB pin
 - "-" port of the 5pin terminal block to ground "-" rail
@@ -37,7 +37,8 @@ Using jumper cables the LED strip can also be connected to the level shifter.
 - The ground (white) wire of the LEDs will be connected to the ground rail of the breadboard.
 
 ### Software
-1. USB Mini Microphone Set-up
+
+#### USB Mini Microphone Set-up
 To set up the usb microphone, first run these sets of commands in Cloud9:
 ```
 sudo apt-get update
@@ -53,7 +54,7 @@ nano ~/.asoundrc
 ```
 You should see in the terminal `pcm "hw:#, #"` The first number should correspond to your card number, followed by your device number. If they do not match, edit the text accordingly. Once this is complete, your microphone should now be set up.
 
-2. LED Strip Set-up
+#### LED Strip Set-up
 For the LED strip, first download and put the following files into a directory:
 - configure_pins.sh
 - run
