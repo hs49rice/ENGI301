@@ -1,8 +1,8 @@
-#Clap-on LED Lightstrip
+# Clap-on LED Lightstrip
 
-##Build Instructions
+## Build Instructions
 
-###Hardware
+### Hardware
 1. USB Mini Microphone
 Before inserting the Pocketbeagle on the breadboard, breadboard wires should be inserted ahead of time for the 5pin micro USB port. Wires should be placed so that when P1_1 of the Pocketbeagle is inserted into hole 1a of the breadboard:
 - P1_7 is connected to VCC of the USB port
@@ -36,7 +36,7 @@ Using jumper cables the LED strip can also be connected to the level shifter.
 - The Data In (green) wire of the LEDs will be connected to the B1 pin of the level shifter.
 - The ground (white) wire of the LEDs will be connected to the ground rail of the breadboard.
 
-###Software
+### Software
 1. USB Mini Microphone Set-up
 To set up the usb microphone, first run these sets of commands in Cloud9:
 ```
@@ -79,7 +79,7 @@ sudo nano /boot/uEnv.txt
 Once the textbox appears, comment out the RPROC firmware and uncomment the UIO firmware.
 Once that is complete run commands `sudo reboot` and `ls /sys/class/uio` to check that UIO is available.
 
-##Operation
+## Operation
 
 First plug the USB hub into an outlet. Make sure you press the button on the USB hub to send power to your LED light strip. A micro USB to USB A cable should be used to connect the Pocketbeagle to your laptop.
 Two terminals must be used to run the code. The command:
